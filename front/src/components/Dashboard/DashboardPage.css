@@ -1,0 +1,137 @@
+/* Navbar estilos */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4190c2; /* Color del fondo del navbar */
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100; /* Asegura que el navbar esté por encima del resto del contenido */
+}
+
+.navbar .logo-image {
+  width: 60px;
+  height: auto;
+}
+
+
+
+
+
+.nav-links {
+  list-style: none;
+  display: flex;           /* Activa flexbox para la alineación horizontal */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;        /* Ajusta la distancia desde la parte superior */
+  width: 100%;             /* Asegura que el contenedor ocupe el 100% del ancho */
+}
+
+/* Estilo general para los elementos de la lista */
+.nav-item {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 20px;          /* Añade espacio horizontal entre los elementos */
+}
+
+/* Estilo de los enlaces */
+.nav-item a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Estilo de los enlaces */
+.nav-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links a:hover {
+  color: #ffcc00; /* Color al pasar el ratón */
+}
+
+
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio entre el nombre de usuario y el botón */
+}
+
+.username {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+
+
+
+
+
+/* Estilos para el botón de Logout */
+.logout-btn {
+  border: 1px solid #fff;
+	background: none;
+	color: #fff;
+	padding: 5px 30px;
+	border-radius: 13px;
+	cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #ff1f3b;
+}
+
+
+
+
+
+.header-container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  .header-image {
+    width: 100%;
+    height: auto;
+    filter: brightness(70%); /* Para oscurecer un poco la imagen si lo deseas */
+  }
+  
+  .header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .header-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .video-consultation-btn {
+    background-color: #62d0f3; /* Color azul de botón */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .video-consultation-btn:hover {
+    background-color: #4bb8d6; /* Efecto hover */
+  }
+  
