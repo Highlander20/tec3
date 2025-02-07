@@ -1,0 +1,188 @@
+.back-button33 {
+    position: absolute; /* Usamos absolute para sacarlo del flujo normal */
+    top: 10px;         /* Distancia desde la parte superior */
+    left: 10px;        /* Distancia desde la izquierda */
+    padding: 10px 20px; /* Añadimos algo de padding para que el botón sea más grande */
+    font-size: 16px;   /* Aumentamos el tamaño de la fuente */
+    cursor: pointer;    /* Cambiamos el cursor al pasar el ratón */
+    background-color: #007BFF; /* Color de fondo */
+    color: white;      /* Color del texto */
+    border: none;      /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+  
+  .back-button33:hover {
+    background-color: #0056b3; /* Cambiamos el color al pasar el ratón */
+  }
+  
+  /* Estilo general para la página de la lista de historias */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Ajusta la altura para centrar verticalmente */
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Contenedor principal para ajustar la posición */
+  .table-container {
+    width: 100%;
+    max-width: 60%; /* Mantener la tabla compacta */
+    margin: auto;
+    padding-top: 20px; /* Espacio superior reducido */
+  }
+  
+  /* Estilos para la tabla de historias clínicas */
+  .historias-table {
+    width: 100%;
+    border-collapse: separate; /* Permitir bordes redondeados */
+    border-spacing: 0; /* Eliminar el espacio entre celdas */
+    font-size: 14px; /* Tamaño de fuente ajustado para mejor visibilidad */
+    text-align: left;
+    background-color: #ffffff; /* Fondo sólido blanco para la tabla */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Bordes redondeados para toda la tabla */
+    overflow: hidden; /* Asegurarse de que los bordes redondeados se apliquen correctamente */
+  }
+  
+  .historias-table th, .historias-table td {
+    padding: 8px 10px; /* Padding reducido para hacer la tabla más compacta */
+    border: 1px solid #ddd; /* Borde entre celdas */
+  }
+  
+  /* Fondo sólido para el encabezado */
+  .historias-table thead {
+    background-color: #3498db;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  
+  /* Aplicar bordes redondeados al encabezado */
+  .historias-table thead th:first-child {
+    border-top-left-radius: 10px; /* Borde superior izquierdo redondeado */
+  }
+  
+  .historias-table thead th:last-child {
+    border-top-right-radius: 10px; /* Borde superior derecho redondeado */
+  }
+  
+  /* Fondo sólido para las filas del cuerpo de la tabla */
+  .historias-table tbody tr {
+    background-color: #f8f8f8;
+  }
+  
+  .historias-table tbody tr:nth-child(even) {
+    background-color: #e8e8e8;
+  }
+  
+  .historias-table tbody tr:hover {
+    background-color: #d1ecf1;
+  }
+  
+  /* Aplicar bordes redondeados al final de la tabla */
+  .historias-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px; /* Borde inferior izquierdo redondeado */
+  }
+  
+  .historias-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px; /* Borde inferior derecho redondeado */
+  }
+  
+  .historias-table td {
+    color: #333;
+  }
+  
+  /* Para móviles: tabla aún más compacta */
+  @media (max-width: 768px) {
+    .historias-table {
+        width: 100%; /* Ancho total en pantallas pequeñas */
+        font-size: 12px; /* Texto más pequeño en pantallas pequeñas */
+    }
+  
+    .historias-table th, .historias-table td {
+        padding: 6px 8px; /* Padding reducido en pantallas pequeñas */
+    }
+  }
+  
+  /* Estilo del contenedor de búsqueda */
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px; /* Espacio debajo del campo de búsqueda */
+  }
+  
+  /* Estilo del input de búsqueda */
+  .search-input {
+    width: 300px; /* Ancho del campo de búsqueda */
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #3498db;
+    border-radius: 4px 0 0 4px; /* Bordes redondeados solo en el lado izquierdo */
+    outline: none;
+    color: #333;
+  }
+  
+  /* Botón de búsqueda */
+  .search-button {
+    background-color: #617881;
+    border: none;
+    padding: 10px;
+    border-radius: 0 4px 4px 0; /* Bordes redondeados solo en el lado derecho */
+    cursor: pointer;
+  }
+  
+  .search-button i {
+    color: white;
+    font-size: 16px;
+  }
+  
+  /* Cambiar color en hover */
+  .search-button:hover {
+    background-color: #2980b9;
+  }
+  
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+}
+
+.modal-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-button:hover {
+    background-color: #0056b3;
+}

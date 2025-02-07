@@ -1,8 +1,7 @@
 import { useState } from 'react';
-//import './LoginPage.css';
 import './login.css';
 import DashboardPage from '../Dashboard/DashboardPage';
-import qrImage from '../../img/qr1.png'; // Importamos la imagen desde la carpeta img
+
 
 const Login = () => {
 
@@ -33,6 +32,7 @@ const Login = () => {
                 //Seteamos de forma global en el localStorage 
                 localStorage.setItem('token', result.token)
                 localStorage.setItem('username', username); // Guardamos el username en localStorage
+                console.log(`Usuario ${username} ha iniciado sesión`); // Mensaje en la consola
                 setLoginSuccessfull(true); //como la respuesta es afirmativa seteamos un estado en true
             } else {
                 setLoginSuccessfull(false);
@@ -48,22 +48,25 @@ const Login = () => {
         //Cuando es true nos lleva a DashboardPage
         <>{loginSuccessfull ? <DashboardPage />: 
             <div className="container">
+                
+                
             <form>
-                <h2>Bienvenidos</h2>
-                <label>Username</label>
-                <input onChange={(event)=>{setUsername(event.target.value)}} type="text"></input>
-                <label>Password</label>
-                <input onChange={(event)=>{setPassword(event.target.value)}} type="password"></input>
+                <h1>Arte Dental - Dr. Emerson Santa Cruz - Odontologia General </h1>
+                <label>Usuario</label>
+                <input onChange={(event)=>{setUsername(event.target.value)}} type="text" placeholder='Nombre de usuario'></input>
+                <label>Contraseña</label>
+                <input onChange={(event)=>{setPassword(event.target.value)}} type="password" placeholder='Contraseña'></input>
                 <button type="submit" onClick={handdleLogin}>Login</button>
-                <div className="form-icons">
-                    <img src={qrImage} alt="QR Code" /> {/* Aquí agregamos la imagen */}
-                    <img src={qrImage} alt="QR Code" /> {/* Aquí agregamos la imagen */}
-                </div>
+                
             </form>
             <div className="image-section">
-                {/* Aquí puedes agregar una imagen médica */}
+
+                <img src="./src/img/logov1.jpeg" class="small-image"/>
+                
             </div>
+            
         </div>
+        
         }</>
     );
 }

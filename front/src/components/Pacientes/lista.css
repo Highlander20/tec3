@@ -1,0 +1,156 @@
+.back-button5 {
+    position: absolute; /* Usamos absolute para sacarlo del flujo normal */
+    top: 10px;         /* Distancia desde la parte superior */
+    left: 10px;        /* Distancia desde la izquierda */
+    padding: 10px 20px; /* Añadimos algo de padding para que el botón sea más grande */
+    font-size: 16px;   /* Aumentamos el tamaño de la fuente */
+    cursor: pointer;    /* Cambiamos el cursor al pasar el ratón */
+    background-color: #007BFF; /* Color de fondo */
+    color: white;      /* Color del texto */
+    border: none;      /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+  
+  .back-button5:hover {
+    background-color: #0056b3; /* Cambiamos el color al pasar el ratón */
+  }
+
+
+  /* Estilo general para la página de la lista de pacientes */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Ajusta la altura para centrar verticalmente */
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Contenedor principal para ajustar la posición */
+.table-container {
+  width: 100%;
+  max-width: 60%; /* Mantener la tabla compacta */
+  margin: auto;
+  padding-top: 20px; /* Espacio superior reducido */
+}
+
+/* Estilos para la tabla */
+.pacientes-table {
+  width: 100%;
+  border-collapse: separate; /* Permitir bordes redondeados */
+  border-spacing: 0; /* Eliminar el espacio entre celdas */
+  font-size: 14px; /* Tamaño de fuente ajustado para mejor visibilidad */
+  text-align: left;
+  background-color: #ffffff; /* Fondo sólido blanco para la tabla */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Bordes redondeados para toda la tabla */
+  overflow: hidden; /* Asegurarse de que los bordes redondeados se apliquen correctamente */
+}
+
+.pacientes-table th, .pacientes-table td {
+  padding: 8px 10px; /* Padding reducido para hacer la tabla más compacta */
+  border: 1px solid #ddd; /* Bordes entre celdas */
+}
+
+/* Fondo sólido para el encabezado */
+.pacientes-table thead {
+  background-color: #3498db;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* Aplicar bordes redondeados al encabezado */
+.pacientes-table thead th:first-child {
+  border-top-left-radius: 10px; /* Borde superior izquierdo redondeado */
+}
+
+.pacientes-table thead th:last-child {
+  border-top-right-radius: 10px; /* Borde superior derecho redondeado */
+}
+
+/* Fondo sólido para las filas del cuerpo de la tabla */
+.pacientes-table tbody tr {
+  background-color: #f8f8f8;
+}
+
+.pacientes-table tbody tr:nth-child(even) {
+  background-color: #e8e8e8;
+}
+
+.pacientes-table tbody tr:hover {
+  background-color: #d1ecf1;
+}
+
+/* Aplicar bordes redondeados al final de la tabla */
+.pacientes-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px; /* Borde inferior izquierdo redondeado */
+}
+
+.pacientes-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px; /* Borde inferior derecho redondeado */
+}
+
+.pacientes-table td {
+  color: #333;
+}
+
+/* Para móviles: tabla aún más compacta */
+@media (max-width: 768px) {
+  .pacientes-table {
+      width: 100%; /* Ancho total en pantallas pequeñas */
+      font-size: 12px; /* Texto más pequeño en pantallas pequeñas */
+  }
+
+  .pacientes-table th, .pacientes-table td {
+      padding: 6px 8px; /* Padding reducido en pantallas pequeñas */
+  }
+}
+
+/* Estilo del contenedor de búsqueda */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px; /* Espacio debajo del campo de búsqueda */
+}
+
+/* Estilo del input de búsqueda */
+.search-input {
+  width: 300px; /* Ancho del campo de búsqueda */
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #3498db;
+  border-radius: 4px 0 0 4px; /* Bordes redondeados solo en el lado izquierdo */
+  outline: none;
+  color: #333;
+}
+
+/* Botón de búsqueda con ícono de lupa */
+.search-button {
+  background-color: #617881;
+  border: none;
+  padding: 10px;
+  border-radius: 0 4px 4px 0; /* Bordes redondeados solo en el lado derecho */
+  cursor: pointer;
+}
+
+.search-button i {
+  color: white;
+  font-size: 16px;
+}
+
+/* Cambiar color en hover */
+.search-button:hover {
+  background-color: #2980b9;
+}
+
+

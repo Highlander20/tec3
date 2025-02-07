@@ -1,0 +1,92 @@
+/* re.css */
+
+.back-button1 {
+    position: absolute; /* Usamos absolute para sacarlo del flujo normal */
+    top: 10px;         /* Distancia desde la parte superior */
+    left: 10px;        /* Distancia desde la izquierda */
+    padding: 10px 20px; /* Añadimos algo de padding para que el botón sea más grande */
+    font-size: 16px;   /* Aumentamos el tamaño de la fuente */
+    cursor: pointer;    /* Cambiamos el cursor al pasar el ratón */
+    background-color: #007BFF; /* Color de fondo */
+    color: white;      /* Color del texto */
+    border: none;      /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.back-button1:hover {
+    background-color: #0056b3; /* Cambiamos el color al pasar el ratón */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.header-content {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.header-content div {
+    margin-bottom: 15px;
+}
+
+.header-content input[type="text"],
+.header-content input[type="email"],
+.header-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.header-content input[type="text"]:focus,
+.header-content input[type="email"]:focus,
+.header-content input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.header-content p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.header-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.header-content a:hover {
+    text-decoration: underline;
+}
+
+.header-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header-content button:hover {
+    background-color: #0056b3;
+}

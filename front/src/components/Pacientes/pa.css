@@ -1,56 +1,95 @@
-.header-container {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
-  
-  .header-image {
-    width: 100%;
-    height: auto;
-    filter: brightness(70%); /* Para oscurecer un poco la imagen si lo deseas */
-  }
-   
-  .header-content {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  .header-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .header-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
+.back-button3 {
+  position: absolute; /* Usamos absolute para sacarlo del flujo normal */
+  top: 10px;         /* Distancia desde la parte superior */
+  left: 10px;        /* Distancia desde la izquierda */
+  padding: 10px 20px; /* Añadimos algo de padding para que el botón sea más grande */
+  font-size: 16px;   /* Aumentamos el tamaño de la fuente */
+  cursor: pointer;    /* Cambiamos el cursor al pasar el ratón */
+  background-color: #007BFF; /* Color de fondo */
+  color: white;      /* Color del texto */
+  border: none;      /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+}
 
-  p a {
-    color: white;
-    text-decoration: none; /* Elimina el subrayado si no lo deseas */
-    transition: color 0.3s ease-in-out; /* Transición suave al hacer hover */
-  }
-  
-  p a:hover {
-    color: #62d0f3; /* Cambia a un color diferente al pasar el ratón, opcional */
-  }
-  
-  
-  .video-consultation-btn {
-    background-color: #62d0f3; /* Color azul de botón */
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .video-consultation-btn:hover {
-    background-color: #4bb8d6; /* Efecto hover */
+.back-button3:hover {
+  background-color: #0056b3; /* Cambiamos el color al pasar el ratón */
+}
+
+
+/* Estilos generales del formulario */
+.header-content1 {
+  background-color: #fcfcfc; /* Fondo blanco */
+  padding: 30px; /* Espaciado interno */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  width: 600px; /* Ancho del formulario */
+  margin: 20px auto; /* Centrar el formulario */
+}
+
+/* Estilo del título */
+.header-content1 h1 {
+  text-align: center; /* Centrar el título */
+  margin-bottom: 20px; /* Espacio debajo del título */
+  font-size: 26px; /* Tamaño de fuente */
+  color: #333; /* Color del texto */
+}
+
+/* Estilos para el contenedor del formulario */
+.form-grid {
+  display: grid; /* Usar grid para el diseño */
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+  gap: 15px; /* Espacio entre columnas */
+}
+
+/* Estilos para cada grupo del formulario */
+.form-group {
+  display: flex;
+  flex-direction: column; /* Colocar label encima del input */
+}
+
+/* Estilos para los inputs */
+.header-content1 input,
+.header-content1 select {
+  padding: 12px; /* Espaciado interno */
+  border: 2px solid #ced4da; /* Borde gris claro */
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+/* Estilo para el input en foco */
+.header-content1 input:focus,
+.header-content1 select:focus {
+  border-color: #007bff; /* Color de borde al enfocarse */
+  outline: none; /* Sin contorno al enfocarse */
+}
+
+/* Estilos para el botón */
+.header-content1 button {
+    max-width: 300px; /* Ancho máximo del botón */
+    margin-left: auto; /* Centrar a la izquierda */
+    margin-right: auto; /* Centrar a la derecha */
+    padding: 14px; /* Espaciado interno */
+    background-color: #2d3fa5; /* Color de fondo del botón */
+    color: #fff; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+/* Efecto hover para el botón */
+.header-content1 button:hover {
+  background-color: #0056b3; /* Color de fondo más oscuro al pasar el mouse */
+  transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+}
+
+/* Efecto de enfoque en el botón */
+.header-content1 button:focus {
+  outline: none; /* Sin contorno al enfocarse */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Resalte en el enfoque */
 }
 
 
@@ -59,74 +98,4 @@
 
 
 
-.login-container {
-	text-align: center;
-	padding: 20px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	max-width: 400px;
-	margin: 0 auto;
-  }
 
-  
-  .input-group {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%; /* Ajusta el ancho según lo necesites */
-    margin-bottom: 15px;
-    border-radius: 20px; /* Aplica el borde redondeado */
-    overflow: hidden; /* Para asegurarse de que el contenido no sobresalga */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra ligera */
-  }
-  
-  .input-group input {
-    width: 100%;
-    padding: 12px 15px;
-    border-radius: 20px; /* Redondea los bordes del input */
-    border: 1px solid #ccc;
-    outline: none;
-    font-size: 1rem;
-    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  
-  .input-group input:focus {
-    border-color: #62d0f3; /* Cambia el color del borde al hacer foco */
-    box-shadow: 0 0 5px rgba(98, 208, 243, 0.5); /* Sombra al hacer foco */
-  }
-  
-  .input-group label {
-    position: absolute;
-    top: -8px;
-    left: 15px;
-    font-size: 0.9rem;
-    color: #999;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .input-group input:focus + label {
-    top: -25px;
-    left: 10px;
-    color: #62d0f3; /* Color del label cuando el input tiene foco */
-    font-size: 0.75rem;
-  }
-  
-  
-  
-  button {
-	padding: 10px 20px;
-	background-color: #007bff;
-	color: #fff;
-	border: none;
-	border-radius: 20px;
-	cursor: pointer;
-}
-
-  .eye-icon {
-	cursor: pointer;
-	position: absolute;
-	right: 10px;
-	top: 50%;
-	transform: translateY(-50%);
-}
-  

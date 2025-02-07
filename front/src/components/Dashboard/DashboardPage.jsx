@@ -6,6 +6,13 @@ import PacientesPage from "../Pacientes/PacientesPage"; // Importamos la página
 import TratamientosPage from "../Tratamientos/TratamientosPage.jsx"; // Importamos la página de tratamientos
 import CitasPage from "../Citas/CitasPage.jsx"; // Importamos la página de Citas
 import RegisterPage from '../Register/RegisterPage.jsx';
+import InfoPage from '../Informacion/InfoPage.jsx';
+import MostrarPacientesPage from '../Pacientes/MostrarPacientePage.jsx';
+import ListadoTratamientosPage from '../Tratamientos/ListadoTratamientosPage.jsx';
+import ListaCitasPage from '../Citas/ListaCitasPage.jsx';
+import HistoriaPage from '../Historias/HistoriaPage.jsx';
+import PagoPacientePage from '../Balance/PagoPacientePage.jsx';
+import ListaHistoriasPage from '../Historias/ListaHistoriasPage.jsx';
 
 const DashboardPage = () => {
 
@@ -21,19 +28,6 @@ const DashboardPage = () => {
             setUsername(storedUsername);
         }
     }, []);
-
-
-    
-    const handleButtonClick = () => {
-        window.open('https://www.youtube.com/watch?v=qPV6EJrSTAk&pp=ygUNZGllbnRlcyBzYW5vcw%3D%3D', '_blank');
-    };
-
-
-    // Función para manejar el clic en el botón de logout
-    //const handleButtonLogout = () => {
-    //    localStorage.removeItem('token'); // Elimina el token o datos de sesión
-    //    navigate('/loginPage'); // Redirige al usuario a la página de login
-    //};  
 
 
     // Función para manejar el clic en el botón de logout
@@ -59,7 +53,20 @@ const DashboardPage = () => {
 
     // Si el estado de la página es "pacientes", mostramos la página de Pacientes
     if (currentPage === 'pacientes') {
-        return <PacientesPage />;
+        return <PacientesPage onBack={() => setCurrentPage('dashboard')} />;
+    }
+
+
+
+    // Función para cambiar a la página de Lista pacientes
+    const goToListaPacientes = () => {
+        setCurrentPage('listaPacientes'); // Actualiza el estado a "pacientes"
+    };
+
+
+    // Si el estado de la página es "pacientes", mostramos la página de Pacientes
+    if (currentPage === 'listaPacientes') {
+        return <MostrarPacientesPage onBack={() => setCurrentPage('dashboard')} />;
     }
 
 
@@ -72,7 +79,54 @@ const DashboardPage = () => {
 
     // Si el estado de la página es "tratamientos", mostramos la página de tratamientos
     if (currentPage === 'tratamientos') {
-        return <TratamientosPage />;
+        return <TratamientosPage onBack={() => setCurrentPage('dashboard')} />;
+    }
+
+
+
+      // Función para cambiar a la página de listar tratamientos
+      const goToListarTratamientos = () => {
+        setCurrentPage('listaTatamientos'); // Actualiza el estado a "tratamientos"
+    };
+
+    // Si el estado de la página es "listar tratamientos", mostramos la página de listar tratamientos
+    if (currentPage === 'listaTatamientos') {
+        return <ListadoTratamientosPage onBack={() => setCurrentPage('dashboard')} />;
+    }
+
+
+    // Función para cambiar a la página de Balance de Paciente
+    const goToPagoPaciente = () => {
+        setCurrentPage('pagopaciente'); // Actualiza el estado a "tratamientos"
+    };
+
+    // Si el estado de la página es "listar tratamientos", mostramos la página de listar tratamientos
+    if (currentPage === 'pagopaciente') {
+        return <PagoPacientePage onBack={() => setCurrentPage('dashboard')} />;
+    }
+
+
+    // Función para cambiar a la página de Historias
+    const goToHistorias = () => {
+        setCurrentPage('historias'); // Actualiza el estado a "historias"
+    };
+
+
+    // Si el estado de la página es "historias", mostramos la página de historias
+    if (currentPage === 'historias') {
+        return <HistoriaPage onBack={() => setCurrentPage('dashboard')} />; // Pasamos la función para volver
+    }
+
+
+    // Función para cambiar a la página de Lista Historias
+    const goTolistaHistorias = () => {
+        setCurrentPage('listahistorias'); // Actualiza el estado a "lista historias"
+    };
+
+
+    // Si el estado de la página es "lista historias", mostramos la página de lista historias
+    if (currentPage === 'listahistorias') {
+        return <ListaHistoriasPage onBack={() => setCurrentPage('dashboard')} />; // Pasamos la función para volver
     }
 
 
@@ -84,7 +138,19 @@ const DashboardPage = () => {
 
     // Si el estado de la página es "citas", mostramos la página de citas
     if (currentPage === 'citas') {
-        return <CitasPage />;
+        return <CitasPage onBack={() => setCurrentPage('dashboard')} />; // Pasamos la función para volver
+    }
+
+
+    // Función para cambiar a la página de Lista de citas
+    const goToListaCitas = () => {
+        setCurrentPage('listacitas'); // Actualiza el estado a "lista citas"
+    };
+
+
+    // Si el estado de la página es "citas", mostramos la página de Lista citas
+    if (currentPage === 'listacitas') {
+        return <ListaCitasPage onBack={() => setCurrentPage('dashboard')} />; // Pasamos la función para volver
     }
 
 
@@ -97,7 +163,19 @@ const DashboardPage = () => {
 
     // Si el estado de la página es "register", mostramos la página de register
     if (currentPage === 'register') {
-        return <RegisterPage />;
+        return <RegisterPage onBack={() => setCurrentPage('dashboard')} />;
+    }
+
+
+    // Función para cambiar a la página de informacion
+    const goToInformacion = () => {
+        setCurrentPage('informacion'); // Actualiza el estado a "register"
+    };
+
+
+    // Si el estado de la página es "register", mostramos la página de register
+    if (currentPage === 'informacion') {
+        return <InfoPage onBack={() => setCurrentPage('dashboard')} />;
     }
 
  
@@ -107,13 +185,43 @@ const DashboardPage = () => {
             {/* Navbar */}
             <nav className="navbar">
                 <div className="logo">
-                    <img src="./src/img/logo.jpg" alt="Logo Clínica" className="logo-image" />
+                    <img src="./src/img/logov2.png" alt="Logo Clínica" className="logo-image" />
                 </div>
                 <ul className="nav-links">
-                    <li className="nav-item home"><a onClick={goToPacientes} href="#pacientes">Pacientes</a></li>
-                    <li className="nav-item services"><a onClick={goToTratamientos} href="#tratamientos">Tratamientos</a></li>
-                    <li className="nav-item contact"><a onClick={goToCitas} href="#citas">Citas</a></li>
+                    <li className="nav-item home">
+                            <a>Pacientes</a>
+                        <ul className="submenu">
+                            <li><a onClick={goToPacientes} href="#pacientes">Nuevo Paciente</a></li>
+                            <li><a onClick={goToListaPacientes} href="#listaPacientes">Lista de Pacientes</a></li>
+                        </ul>
+                    </li>
+
+                    <li className="nav-item services">
+                        <a>Tratamientos</a>
+                        <ul className="submenu">
+                            <li><a onClick={goToTratamientos} href="#pantalladental">Pantalla Dental</a></li>
+                            <li><a onClick={goToListarTratamientos} href="#listaTatamientos">Listado de Tratamiento</a></li>
+                            <li><a onClick={goToPagoPaciente} href="#pagopaciente">Pago del Paciente</a></li>
+                        </ul>
+                    </li>
+
+                    <li className="nav-item contact">
+                        <a>Historiales</a>
+                        <ul className="submenu">
+                            <li><a onClick={goToHistorias} href="#historias">Nuevo Historial</a></li>
+                            <li><a onClick={goTolistaHistorias} href="#listahistorias">Lista de Historiales</a></li>
+                        </ul>
+                    </li>
+
+                    <li className="nav-item contact">
+                        <a>Citas</a>
+                        <ul className="submenu">
+                            <li><a onClick={goToCitas} href="#citas">Nueva Cita</a></li>
+                            <li><a onClick={goToListaCitas} href="#listacitas">Lista de Citas</a></li>
+                        </ul>
+                    </li>
                     <li className="nav-item about"><a onClick={goToRegister} href="#register">Registrarse</a></li>
+                    <li className="nav-item about"><a onClick={goToInformacion} href="#informacion">Acerca de Nosotros</a></li>
                 </ul>
 
                 <div className="user-info">
@@ -128,22 +236,16 @@ const DashboardPage = () => {
             {/* Header Container */}
             <div className="header-container">
                 <img 
-                    src="./src/img/foto.jpg" 
+                    src="./src/img/diente.jpeg" 
                     alt="Clínica Dental Vilafamés" 
                     className="header-image" 
-                />
-                <div className="header-content">
-                    <h1>Tu clínica dental de familia</h1>
-                    <p>En Pucallpa y alrededores</p>
+                /> 
+            </div>
 
-                    {/* Botón que redirige a YouTube al hacer clic */}
-                    <button 
-                        className="video-consultation-btn" 
-                        onClick={handleButtonClick}
-                    >
-                        Vídeo-consulta
-                    </button>
-                </div>
+            {/* Contenedor para el texto grande alineado a la izquierda */}
+            <div className="text-left-container">
+                <h1 className="big-left-text">¡Bienvenidos a nuestra clínica!</h1>
+                <p className="location-text">En Pucallpa y alrededores</p>
             </div>
         </>
     );

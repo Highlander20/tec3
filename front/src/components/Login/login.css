@@ -1,7 +1,10 @@
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #e0f7fa, #80d8ff);
+    background-image: url('../../img/Logito.jpg');
+    background-size: 1370px 900px; /* Cambia el ancho y alto según lo que necesites */
+    background-repeat: no-repeat; /* Para que la imagen no se repita */
+    background-position: center; /* Para centrar la imagen */
     margin: 0;
     padding: 0;
     display: flex;
@@ -15,7 +18,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 100%;
     max-width: 1200px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
@@ -26,8 +29,8 @@ body {
 
 /* Formulario */
 form {
-    padding: 40px;
-    width: 50%;
+    padding: 50px;
+    width: 30%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -74,20 +77,18 @@ button[type="submit"]:hover {
 
 /* Estilo de la sección de la imagen */
 .image-section {
-    width: 50%;
-    background-image: url('../../img/login.jpg'); /* Sustituir por la URL de la imagen del doctor */
-    background-size: cover;
-    background-position: center;
-}
-
-/* Ajuste QR o íconos en el formulario (opcional) */
-.form-icons {
+    width: 66%;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    background-size: cover; /* Cambia el ancho y alto según lo que necesites */
+    background-repeat: no-repeat; /* Para que la imagen no se repita */
+    background-position: center; /* Para centrar la imagen */
 }
 
-.form-icons img {
-    width: 50px;
-    margin: 0 10px;
+.small-image {
+    width: 100%; /* Ajusta el tamaño según tu preferencia */
+    height: auto; /* Mantiene las proporciones */
 }
+
+

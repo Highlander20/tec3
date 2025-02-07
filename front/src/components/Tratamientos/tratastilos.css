@@ -1,0 +1,159 @@
+/* Botón de regresar */
+.back-button10 {
+  position: absolute; /* Posición absoluta para sacarlo del flujo normal */
+  top: 10px; /* Distancia desde la parte superior */
+  left: 10px; /* Distancia desde la izquierda */
+  padding: 10px 20px; /* Padding para agrandar el botón */
+  font-size: 16px; /* Tamaño de la fuente */
+  cursor: pointer; /* Cambiar el cursor cuando se pasa el ratón */
+  background-color: #007BFF; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.back-button10:hover {
+  background-color: #0056b3; /* Color al pasar el ratón */
+}
+
+/* Página de tratamientos */
+.tratamientos-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  justify-content: center; /* Centra verticalmente */
+}
+
+/* Diagrama de dientes */
+.teeth-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Hacer más ancho */
+}
+
+.teeth-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+.quadrant {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* Ocho columnas */
+  gap: 10px;
+  width: 100%; /* Ancho completo */
+}
+
+/* Dientes */
+.tooth {
+  width: 50px; /* Hacemos los dientes un poco más grandes */
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #007BFF; /* Color del borde */
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+
+.tooth:hover {
+  background-color: #e7f1ff; /* Color de fondo al pasar el mouse */
+  transform: scale(1.05); /* Aumenta ligeramente al pasar el mouse */
+}
+
+.tooth.selected {
+  background-color: #007BFF; /* Color cuando está seleccionado */
+  color: white; /* Color del texto cuando está seleccionado */
+}
+
+/* Selectores */
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+select:focus {
+  border-color: #007BFF;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+  border-color: #007BFF;
+}
+
+/* Botón de registrar */
+button[type="submit"] {
+  width: 50%;
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo del formulario */
+.header-content1 {
+  margin: 0 auto; /* Centrar horizontalmente */
+  padding: 20px;
+  width: 100%; /* Ancho completo */
+  max-width: 700px; /* Ancho máximo */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Apilar elementos verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+}
+
+/* Grid del formulario */
+.form-grid {
+  display: grid; /* Usar grid para la disposición */
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 20px; /* Espaciado entre los elementos */
+  width: 100%; /* Ocupa todo el ancho */
+}
+
+/* Grupo del formulario */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ocupa todo el ancho */
+}
+
+/* Etiquetas */
+label {
+  margin-bottom: 5px; /* Espacio entre el label y el input */
+}
